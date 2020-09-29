@@ -1,0 +1,10 @@
+h1{
+	font-size:2em;
+}
+.Container{
+	display:grid;
+	grid-template-columns:800px 100px 100px;
+	grid-template-rows:auto;
+	grid-template-areas:
+	"header nav ."
+}
