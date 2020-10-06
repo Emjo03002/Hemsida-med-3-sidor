@@ -4,32 +4,47 @@ h1{
 }
 .Container{
 	display:grid;
-	grid-template-columns:550px 200px 100px;
-	grid-template-rows:100px;
-	grid-template-areas:
-	"header nav ."
-}
-.Container2{
-	grid-template-columns:100px 100px;
-	grid-template-rows:auto;
+	grid-template-columns:640px 640px 640px;
+	grid-template-rows:10vh 10vh 60vh 20vh ;
+	grid-template-areas: 
+	"header header header"
+	"nav nav nav" 
+	"main main main"
+	"footer footer footer";
 }
 body {
 	background-color: darkgoldenrod;
+	margin:0;
 }
 a{
 	text-decoration:none;
 	font-size:2em;
+	
 }
 a:hover{
-	color:black;
+	color:white;
+	background-color:black;
 }
 a:link{
-	color:black;
+	color:white;
+	background-color:black;
 }
 a:visited{
-	color:black;
+	color:white;
+	background-color:black;
 }
 ul{
 	list-style-type:none;
 	padding:0;
+}
+nav{
+	background-color:White;
+	text-align:center;
+}
+header{
+	text-align:center;
+}
+footer > p{
+	grid-area: footer;
+	font-size:20px;
 }
