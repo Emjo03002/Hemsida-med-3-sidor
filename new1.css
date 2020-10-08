@@ -1,0 +1,73 @@
+h1{
+	font-size:2em;
+	margin:0;
+	grid-column:2;
+}
+.Container{
+	display:grid;
+	grid-template-columns:5vh 1fr 1fr 1fr 5vh;
+	grid-template-rows:10vh 10vh 60vh 1fr ;
+	grid-template-areas: 
+	". header header header ."
+	". nav nav nav ." 
+	". main main main ."
+	". footer footer footer .";
+}
+body {
+	background-color: crimson;
+	margin:0;
+	height:100vh;
+}
+a{
+	text-decoration:none;
+	font-size:2em;
+	
+}
+a:hover{
+	color:black;
+}
+a:link{
+	color:black;
+}
+a:visited{
+	color:black;
+}
+nav{
+	background-color:palegreen;
+	text-align:center;
+	grid-area:nav;
+	
+}
+
+nav ul{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	list-style-type:none;
+	padding:0;
+	
+}
+header{
+	text-align:center;
+	grid-area:header;
+	display:grid;
+	grid-template-columns:10% 1fr 10%;
+}
+footer > p{
+	font-size:20px;
+}
+footer{
+	grid-area: footer;
+	background-color:royalblue;
+}
+main{
+	grid-area:main;
+
+}
+main,header{
+	background-color:white;
+}
+header img{
+	height:10vh;
+	width:10vh;
+	
+}
