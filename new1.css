@@ -1,73 +1,98 @@
-h1{
-	font-size:2em;
-	margin:0;
-	grid-column:2;
+h1{ /* typselektor*/
+	font-size:2em;  /* text storlek */
+	margin:0;  /* tar bort matgin  */
+	grid-column:2;  /* I vilken kolumn som h1 ligger i  */
 }
-.Container{
-	display:grid;
-	grid-template-columns:5vh 1fr 1fr 1fr 5vh;
-	grid-template-rows:10vh 10vh 60vh 1fr ;
-	grid-template-areas: 
-	". header header header ."
-	". nav nav nav ." 
-	". main main main ."
-	". footer footer footer .";
+main p.Emil{  /* Avkomningsselektor och klasselektor */
+	 font-family: Cabin, sans-serif;  /* teckensnitt */
+	 margin-left:10px; /* marginal vänster */
+	 text-align:center; /* text mitten */
+	 margin-right:10px; /* marginal höger */
 }
-body {
-	background-color: crimson;
-	margin:0;
-	height:100vh;
+.Container{  /* Klasselektor */
+	display:grid;  /* vissar grid */
+	grid-template-columns:5vh 1fr 1fr 1fr 5vh;  /* Kolumner */
+	grid-template-rows:10vh 10vh 60vh 1fr ;  /* Rader */
+	grid-template-areas:   /* Vad som hamnar var i griden */
+	". header header header ." /* Första raden Header */
+	". nav nav nav ."  /* Andra raden nav */
+	". main main main ."  /* Tredje raden Main */
+	". footer footer footer .";  /* Fjärde raden footer */
 }
-a{
-	text-decoration:none;
+body {  /* typselektor Hela sidan */
+	background-color: crimson;  /* Bakgrunds färg */
+	margin:0;  /* ingen yttrekant */
+	height:100vh;  /* Storlek på sidan */
+}
+nav a{  /* avkomlingsselektor */
+	text-decoration:none;  /* Inget understräck */
 	font-size:2em;
 	
 }
-a:hover{
+nav a:hover{  /* avkomlingsselektor Pseudoklasser */
+	color:black;  /* text färg */
+} 
+nav a:link{ 
 	color:black;
 }
-a:link{
-	color:black;
+nav a:visited{ 
+	color:black; 
 }
-a:visited{
-	color:black;
-}
-nav{
+nav{  /* typselektor */
 	background-color:palegreen;
-	text-align:center;
-	grid-area:nav;
-	
+	text-align:center; 
+	grid-area:nav; 
 }
-
-nav ul{
+nav ul{  /* grid i nav */
 	display:grid;
 	grid-template-columns:1fr 1fr 1fr;
 	list-style-type:none;
 	padding:0;
 	
 }
-header{
+header{  /* var texten är i header */
 	text-align:center;
 	grid-area:header;
-	display:grid;
-	grid-template-columns:10% 1fr 10%;
-}
-footer > p{
-	font-size:20px;
-}
-footer{
-	grid-area: footer;
-	background-color:royalblue;
-}
-main{
-	grid-area:main;
 
 }
-main,header{
+footer p{  /* text storlek */
+	font-size:20px;
+}
+footer{  /* grid och backgrunds färg i footer */
+	grid-area: footer;
+	background-color:royalblue;
+	display:grid;
+	grid-template-columns:10% 1fr 10%;
+	grid-template-rows:10% 1fr;
+	grid-template-areas:
+	". . ."
+	"h1 h1 img"
+	". . ."
+}
+main{  /* main är i arean main  */
+	grid-area:main;
+}
+main,header{  /* färg main och header */
 	background-color:white;
 }
-header img{
+main img{  /* bild i main */
+	float:right;
+} 
+footer img{  /* bild i footer */
+	margin-top:10%;
+	background-color:white;
 	height:10vh;
 	width:10vh;
-	
+}
+table, tr, th, td{  /* tabel storlek och linjer */
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 1000px;
+	height: 40px;
+}
+tr:nth-child(odd){  /* Zebrastriping */
+	background-color:lightgray;
+}
+tr:nth-child(even){  /* Zebrastriping */
+	background-color:white;
 }
